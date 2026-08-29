@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mikkel Hulstrøm</title>
+<meta name="description" content="Portfolio of Mikkel Hulstrøm, electronics and embedded systems engineer. PCB design, firmware, and hardware projects.">
+<link rel="icon" href="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Continuous copper "net" trace that runs down the page connecting each section, like a schematic net -->
+<div class="net-trace" aria-hidden="true"><div class="net-fill" id="netFill"></div></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+       <svg viewBox="0 0 32 32" width="28" height="28">
+        <!-- Border -->
+        <rect
+          x="1" y="1"
+          width="30" height="30"
+          rx="4"
+          fill="none"
+          stroke="var(--copper)"
+          stroke-width="1.5"
+        />
+
+        <!-- X axis -->
+        <path
+          d="M6 16 H27"
+          stroke="var(--copper)"
+          stroke-width="1.3"
+          stroke-linecap="round"
+        />
+
+        <!-- Sine wave -->
+        <path
+          d="M6 16
+            C8.6 16 8.6 10 11.2 10
+            C13.8 10 13.8 22 16.4 22
+            C19 22 19 10 21.6 10
+            C24.2 10 24.2 16 27 16"
+          fill="none"
+          stroke="#2252ab"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+
+        <!-- Y axis — far left -->
+        <path
+          d="M5.5 16 V5"
+          stroke="var(--copper)"
+          stroke-width="1.3"
+          stroke-linecap="round"
+        />
+      </svg>
+      </span>
+      <span class="brand-text"><span class="brand-dim"></span></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#about"><span class="pin">R1</span>Omkring mig</a>
+      <a href="#projects"><span class="pin">R2</span>Projekter</a>
+      <a href="#skills"><span class="pin">R3</span>Færdigheder</a>
+      <!-- <a href="#experience"><span class="pin">R4</span>Experience</a> -->
+      <a href="#contact"><span class="pin">R4</span>Kontakt</a>
+    </nav>
+   <!-- <a class="btn btn-ghost nav-resume" href="resume.pdf">Resumé</a> -->
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <a href="#about">Omkring mig</a>
+    <a href="#projects">Projekter</a>
+    <a href="#skills">Færdigheder</a>
+    <!-- <a href="#experience">Erfaring</a> -->
+    <a href="#contact">Kontakt</a>
+    <!-- <a href="resume.pdf">Resumé</a> -->
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <div class="hero-content">
+        <p class="eyebrow"><span class="designator">U1</span> PROJEKT &amp; PORTFOLIO</p>
+        <h1 class="hero-title">Mikkel Hulstrøm<span class="cursor" aria-hidden="true">_</span></h1>
+        <p class="hero-sub">
+          Jeg er en HTX studerende, der har en passion for elektronik og fysik. Jeg,
+          har arbejdet med forskellige projekter inden for elektronik, herunder design og implementering af kredsløb, programmering af mikrokontrollere og udvikling af prototyper. Jeg er altid på udkig efter nye udfordringer og muligheder for at udvide min viden og færdigheder inden for elektronik og teknologi.
+          Jeg har en stor interesse i at forske og udvikle ting for at forstå dem.
+          Jeg drømmer om at være i fronten af udvikling af teknologi til at forstå universet bedre. 
+          Om det er raketvidenskab, rumforskning eller fysik, så er jeg klar på at lære og udvikle mig inden for disse områder.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">Se projekter</a>
+          <a class="btn btn-outline" href="#contact">Kontakt mig</a>
+        </div>
+
+        <dl class="hero-specs">
+          <div><dt>Fokuspunkter</dt><dd>Elektronik · Fysik</dd></div>
+          <div><dt>Værktøjer</dt><dd>KiCad · STM32 · ESP32 · Embedded C/C++ · Visual Studio Code</dd></div>
+          <div><dt>Status</dt><dd><span class="status-dot" aria-hidden="true"></span>Igang med projekter</dd></div>
+        </dl>
+      </div>
+
+      <div class="image-hero">
+        <img src="images/test.JPG" alt="Mikkel Hulstrøm" width="400" height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="wrap section-grid">
+      <div class="section-label">
+        <span class="via" data-net="NET_ABOUT"></span>
+        <p class="eyebrow">R1 · OMKRING MIG</p>
+        <h2>Fra fysik til elektronik</h2>
+      </div>
+      <div class="image-about">
+        <img src="images/test.JPG" alt="Mikkel Hulstrøm" width="400" height="400">
+      </div>
+
+      <div class="section-body">
+        <p>
+        Jeg er en HTX studerende, der har en passion for elektronik og fysik. Jeg,
+        har arbejdet med forskellige projekter inden for elektronik, herunder design og implementering af kredsløb, programmering af mikrokontrollere og udvikling af prototyper. Jeg er altid på udkig efter nye udfordringer og muligheder for at udvide min viden og færdigheder inden for elektronik og teknologi.
+        Jeg har en stor interesse i at forske og udvikle ting for at forstå dem.
+        Jeg drømmer om at være i fronten af udvikling af teknologi til at forstå universet bedre. 
+        Om det er raketvidenskab, rumforskning eller fysik, så er jeg klar på at lære og udvikle mig inden for disse områder.
+        </p>
+        <p>
+          Det meste af mine projekter handler derfor om ting som RF, Digitale kredsløb og programmering. Da disse er ting som eventuelt vil kunne bruges til ting som
+          satelitter, raketter og rumforsking. Og ikke mindst som maskiner som Large Hadron Collider, som jeg har en stor interesse i. Jeg har derfor også en stor interesse i at lære mere om fysik og hvordan man kan bruge elektronik til at forstå universet bedre.
+        </p>
+        <ul class="fact-strip">
+          <li><span class="fact-num">0</span><span class="fact-label">boards taped out</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="section-label">
+        <span class="via" data-net="NET_PROJECTS"></span>
+        <p class="eyebrow">R2 · PROJEKTER</p>
+        <h2>Udvalgte projekter</h2>
+        <p></p>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="board-card">
+          <div class="board-corners" aria-hidden="true"></div>
+          <div class="board-top">
+            <span class="board-tag">PCB · PROGRAMMERING · METAL ARBEJDE · 3D PRINT</span>
+            <!--<span class="board-rev">rev B</span> -->
+          </div>
+          <h3><a href="project.html?p=1U-cubesat">1U CubeSat</a></h3>
+          <p>
+            1U CubeSat med frame konstruktion og PCB design og Diagram tegning.
+            Og komponent valg og programmering af mikrokontrolleren. Og 3D print af dele til CubeSat'en.
+          </p>
+          <ul class="board-tags">
+            <li>KiCad</li><li>STM32</li><li>I²C</li><li>3D Print</li><li>Metal arbejde</li><li>SPI</li>
+          </ul>
+          <div class="board-links">
+            <a href="project.html?p=1U-cubesat">Se mere om projektet &rarr;</a>
+            <a href="" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+
+        <article class="board-card">
+          <div class="board-corners" aria-hidden="true"></div>
+          <div class="board-top">
+            <span class="board-tag">RF · SDR · SATTELITER · DECODING · METAL ARBEJDE · 3D PRINT</span>
+            <!--<span class="board-rev">rev B</span> -->
+          </div>
+          <h3><a href="project.html?p=dipol-antenna">Dipol Antenne</a></h3>
+          <p>
+            Dipol antenne til at modtage signaler fra vejr satelitter. Og 3D print af dele til antennen.
+            Og metal arbejde til at lave antennen. Og brug af SDR til at dekode signaler fra vejr satelitter.
+          </p>
+          <ul class="board-tags">
+            <li>RF</li><li>SDR</li><li>SATTELITER</li><li>DECODING</li><li>Metal arbejde</li><li>3D Print</li>
+          </ul>
+          <div class="board-links">
+            <a href="project.html?p=dipol-antenna">Se mere om projektet &rarr;</a>
+            <a href="" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+   <!-- SKILLS — styled as a Bill of Materials -->
+  <section class="section section-alt" id="skills">
+    <div class="wrap">
+      <div class="section-label">
+        <span class="via" data-net="NET_SKILLS"></span>
+        <p class="eyebrow">R3 · FÆRDIGHEDER</p>
+        <h2>Liste af færdigheder</h2>
+        <p></p>
+      </div>
+
+      <div class="bom">
+        <div class="bom-header">
+          <span>Bes.</span><span>Færdighed</span><span>Noter</span><span></span>
+        </div>
+
+        <div class="bom-row">
+          <span class="bom-des">U1</span>
+          <span class="bom-name">Diagrammer og PCB</span>
+          <span class="bom-val">KiCad, diagram og pcb design</span>
+          <!-- <span class="bom-qty">★★★★★</span> -->
+        </div>
+        <div class="bom-row">
+          <span class="bom-des">U2</span>
+          <span class="bom-name">Indlejrede systemer</span>
+          <span class="bom-val">C / C++, STM32, ESP32, RASPBERRY PI</span>
+          <!-- <span class="bom-qty">★★★★★</span> -->
+        </div>
+        <!--<div class="bom-row">
+          <span class="bom-des">U3</span>
+          <span class="bom-name">Analog</span>
+          <span class="bom-val">Op-amps, filters, switching &amp; linear regulation</span>
+         <span class="bom-qty">★★★★☆</span>
+        </div>-->
+        <div class="bom-row">
+          <span class="bom-des">U4</span>
+          <span class="bom-name">Antenner og SDR</span>
+          <span class="bom-val">Konstruktion af simple antenner og brug af SDR til dekodning af feks Vejrsatelitter</span>
+         <!-- <span class="bom-qty">★★★★☆</span> -->
+        </div>
+        <div class="bom-row">
+          <span class="bom-des">U5</span>
+          <span class="bom-name">Test & Udstyr</span>
+          <span class="bom-val">Oscilloskoper, Multimeter, Bench Strømforsyning</span>
+          <!-- <span class="bom-qty">★★★★★</span> -->
+        </div>
+        <div class="bom-row">
+          <span class="bom-des">U6</span>
+          <span class="bom-name">Matematik</span>
+          <span class="bom-val">Brug af Maple</span>
+          <!-- <span class="bom-qty">★★★★☆</span> -->
+        </div>
+        <div class="bom-row">
+          <span class="bom-des">U7</span>
+          <span class="bom-name">Konstruktion</span>
+          <span class="bom-val">3D print med PRUSA MK4, Metalarbejde (Drejebænke, fræsere & svejsning), Trræarbejde osv</span>
+          <!-- <span class="bom-qty">★★★☆☆</span> -->
+        </div>
+        <div class="bom-row">
+          <span class="bom-des">U8</span>
+          <span class="bom-name">Fag</span>
+          <span class="bom-val">Matematik A, Fysik A & Bioteknologi A på HTX</span>
+          <!-- <span class="bom-qty">★★★★☆</span> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- EXPERIENCE -->
+  <!--<section class="section section-alt" id="experience">
+    <div class="wrap">
+      <div class="section-label">
+        <span class="via" data-net="NET_EXP"></span>
+        <p class="eyebrow">R4 · EXPERIENCE</p>
+        <h2>Trace history.</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <p class="timeline-date">2023 — Present</p>
+            <h3>Senior Electronics Engineer · Fieldtone Instruments</h3>
+            <p>Own PCB design and firmware for a line of portable measurement instruments,
+              from schematic through EMC pre-compliance testing.</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <p class="timeline-date">2021 — 2023</p>
+            <h3>Hardware Engineer · Northlight Robotics</h3>
+            <p>Designed motor-drive and sensor boards for small autonomous robots; built the
+              production test jigs used on the assembly line.</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <p class="timeline-date">2019 — 2021</p>
+            <h3>Firmware Engineer · Kestrel Wireless Labs</h3>
+            <p>Wrote low-power embedded firmware for BLE and LoRa sensor products,
+              including OTA update and power-management subsystems.</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <p class="timeline-date">2015 — 2019</p>
+            <h3>B.Sc. Electrical &amp; Electronics Engineering · Technical University</h3>
+            <p>Thesis on low-noise analog front-ends for portable biomedical sensing.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>-->
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div class="section-label centered">
+        <span class="via" data-net="NET_CONTACT"></span>
+        <p class="eyebrow">R4 · CONTACT</p>
+        <h2>Kontakt mig.</h2>
+        <p class="contact-sub">Tilgængelig for nye projekter og samarbejde og andre ting.</p>
+      </div>
+
+      <div class="connector">
+        <a class="connector-pin" href="mailto:mikkelhulstrom.eng@gmail.com">
+          <span class="pin-num">1</span>
+          <span class="pin-label">Email</span>
+          <span class="pin-value">mikkelhulstrom.eng@gmail.com</span>
+        </a>
+        <a class="connector-pin" href="https://github.com/" target="_blank" rel="noopener">
+          <span class="pin-num">2</span>
+          <span class="pin-label">GitHub</span>
+          <span class="pin-value">github.com/mikkelhulstrom</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>© <span id="year"></span> Mikkel Hulstrøm.</p>
+    <p class="footer-note"></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
