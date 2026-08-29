@@ -12,7 +12,10 @@ summary: En V-Dipol antenne til at opfange radiosignaler fra vejr satelitter som
 
 En V-Dipol antenne er lavet ved at man har to længder rør/kabel kald det hvad du vil som er placeret 120 grader fra hinanden. 
 En Dipol antenne er lavet ved at de to længder skal være 1/2 bølgelængde sammenlagt og 1/4 bølgelængde hver især. Det udregner man ved formlen 
-$$\lambda=\frac{c}{f}$$  
+
+$$
+\lambda=\frac{c}{f}
+$$  
 
 ## The problem
 
