@@ -113,9 +113,8 @@ function parseFrontmatter(raw) {
 
   return { meta, body: raw.slice(match[0].length) };
 }
-
 function renderProject(meta, body) {
-  document.title = `${meta.title || 'Projekt'} —  Mikkel Hulstrøm`;
+  document.title = `${meta.title || 'Projekt'} — Mikkel Hulstrøm`;
 
   const tagEl = document.getElementById('pTag');
   const metaParts = [meta.category, meta.rev, meta.date].filter(Boolean);
@@ -148,11 +147,23 @@ function renderProject(meta, body) {
     actionsEl.appendChild(a);
   }
 
-  if (pBody) {
+    if (pBody) {
     if (window.marked) {
       pBody.innerHTML = marked.parse(body);
+
+      if (typeof renderMathInElement === 'function') {
+        renderMathInElement(pBody, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '\\[', right: '\\]', display: true },
+            { left: '\\(', right: '\\)', display: false }
+          ],
+          throwOnError: false
+        });
+      } else {
+        console.error('KaTeX auto-render did not load!');
+      }
     } else {
-      // Fallback if the markdown library failed to load (e.g. offline).
       const pre = document.createElement('pre');
       pre.textContent = body;
       pBody.innerHTML = '';
@@ -160,6 +171,7 @@ function renderProject(meta, body) {
     }
   }
 }
+
 
 function showProjectError(message) {
   const titleEl = document.getElementById('pTitle');

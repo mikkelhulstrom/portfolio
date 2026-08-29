@@ -8,7 +8,14 @@ repo: https://github.com/
 summary: En V-Dipol antenne til at opfange radiosignaler fra vejr satelitter som de analoge signaler fra NOAA 15, 18 osv. Såvel også de digitale signaler fra feks Meteor No M2,M3 satelitten. Dette vil den gøre ved at have en resonant frekvens på 137MHz.
 ---
 
+<figure style="margin: 0; display: inline-block;">
+  <img src="/images/noaa18.png" alt="Beskrivelse af billedet">
+  <figcaption style="font-size: 0.8rem; color: #555; text-align: left; margin-top: -30px;">Billede af NOAA18 fra https://en.wikipedia.org/wiki/NOAA-18.
+  </figcaption>
+</figure>
+
 ## Overview
+
 
 En V-Dipol antenne er lavet ved at man har to længder rør/kabel kald det hvad du vil som er placeret 120 grader fra hinanden. 
 En Dipol antenne er lavet ved at de to længder skal være 1/2 bølgelængde sammenlagt og 1/4 bølgelængde hver især. Det udregner man ved formlen 
