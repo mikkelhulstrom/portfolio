@@ -18,7 +18,7 @@ summary: En V-Dipol antenne til at opfange radiosignaler fra vejr satelitter som
 </header>
 <h1 id="introduction">Introduction</h1>
 <figure id="fig:noaa18" data-latex-placement="htbp">
-<img src="../images/noaa18.png" style="width:100.0%" />
+<img src="images/noaa18.png" style="width:100.0%" />
 <figcaption>Billede af NOAA18 fra https://en.wikipedia.org/wiki/NOAA-18.<figcaption>
 
 </figure>
